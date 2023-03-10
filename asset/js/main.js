@@ -18,27 +18,32 @@ Abbiamo usato un operatore  nei giorni scorsi che possiamo riusare in questi ese
 
 //Scrivere in console.log numeri da 1 a 100
 const ulElement = document.createElement("ul");
-const liElement = document.createElement("li")
+
+const bodyEl = document.querySelector("body")
+bodyEl.prepend(ulElement)
+
 
 for (let i = 1; i < 101; i++) {
+    
+    const liElement = document.createElement("li")
+    
+    ulElement.append(liElement)
 
-    if (i % 3 == 0) {
 
+    if (i % 3 == 0 && i % 5 == 0) {
+        liElement.innerHTML = 'fizzbuzz'
+        liElement.classList.add("frizzbuzz")
     } else if (i % 5 == 0) {
-        
-    } else if (i % 3 == 0 && i % 5 == 0) {
-        
+        liElement.innerHTML = 'buzz'
+    } else if (i % 3 == 0)  {
+        liElement.innerHTML = 'fizz'
+    } else {
+        liElement.innerHTML = i
     }
-    else if (i % 3 == 0 && i % 5 == 0) {
-        
-    }
-    liElement.append(i)
+
 }
 
 
-ulElement.append(liElement)
-
-console.log(ulElement);
-
+console.log(ulElement)
 
 
