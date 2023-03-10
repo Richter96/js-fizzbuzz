@@ -13,21 +13,22 @@ Abbiamo usato un operatore  nei giorni scorsi che possiamo riusare in questi ese
 
 // dischiaro le costanti 
 const ulElement = document.createElement("ul");
-const bodyEl = document.querySelector("body")
-const containerEl = document.createElement("container")
-const headerEl = document.createElement("header")
-const h1El = document.createElement("h1")
+const bodyEl = document.querySelector("body");
+const containerEl = document.createElement("container");
+const headerEl = document.createElement("header");
+const h1El = document.createElement("h1");
 
 // inserisco all'interno delle classi degli elementi
-bodyEl.prepend(headerEl, containerEl)
-containerEl.prepend(ulElement)
-headerEl.append(h1El)
+bodyEl.prepend(headerEl, containerEl);
+containerEl.prepend(ulElement);
+headerEl.append(h1El);
 
 //inserisco nel h1 
 document.querySelector("h1").innerHTML = "FizzBuzzDOM"
 
 //aggiungiamo delle classi agli elementi
 h1El.classList.add ("display-1", "text-center", "text-white")
+ulElement.classList.add ("p-0", "justify-content-center")
 
 // cambiamo gli stili agli elementi
 bodyEl.style.backgroundColor = "#083b4c"
@@ -54,9 +55,10 @@ for (let i = 1; i <= 100; i++) {
         liElement.style.backgroundColor = "#1389b2"
     }
 
+    liElement.classList.add ("shadow-lg", "p-3", "mb-5", "rounded")
+
 
 }
-
 console.log(ulElement)
 
 
