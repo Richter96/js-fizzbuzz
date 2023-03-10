@@ -16,11 +16,22 @@ const ulElement = document.createElement("ul");
 const bodyEl = document.querySelector("body")
 const containerEl = document.createElement("container")
 const headerEl = document.createElement("header")
+const h1El = document.createElement("h1")
 
-
+// inserisco all'interno delle classi degli elementi
 bodyEl.prepend(headerEl, containerEl)
-bodyEl.style.backgroundColor = "#083b4c"
 containerEl.prepend(ulElement)
+headerEl.append(h1El)
+
+//inserisco nel h1 
+document.querySelector("h1").innerHTML = "FizzBuzzDOM"
+
+//aggiungiamo delle classi agli elementi
+h1El.classList.add ("display-1", "text-center", "text-white")
+
+// cambiamo gli stili agli elementi
+bodyEl.style.backgroundColor = "#083b4c"
+
 
 //Scrivere in console.log numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
