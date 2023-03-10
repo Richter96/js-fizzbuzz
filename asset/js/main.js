@@ -15,8 +15,11 @@ Abbiamo usato un operatore  nei giorni scorsi che possiamo riusare in questi ese
 const ulElement = document.createElement("ul");
 const bodyEl = document.querySelector("body")
 const containerEl = document.createElement("container")
+const headerEl = document.createElement("header")
 
-bodyEl.prepend(containerEl)
+
+bodyEl.prepend(headerEl, containerEl)
+bodyEl.style.backgroundColor = "#083b4c"
 containerEl.prepend(ulElement)
 
 //Scrivere in console.log numeri da 1 a 100
@@ -28,20 +31,20 @@ for (let i = 1; i <= 100; i++) {
 
     if (i % 3 == 0 && i % 5 == 0) {
         liElement.innerHTML = 'fizzbuzz'
+        liElement.style.backgroundColor = "red"
     } else if (i % 5 == 0) {
         liElement.innerHTML = 'buzz'
-        liElement.style.backgroundColor = "red"
+        liElement.style.backgroundColor = "orange"
     } else if (i % 3 == 0)  {
         liElement.innerHTML = 'fizz'
-        liElement.style.backgroundColor = "orange"
+        liElement.style.backgroundColor = "#0cd6a1"
     } else {
         liElement.innerHTML = i
-        liElement.style.backgroundColor = "light"
+        liElement.style.backgroundColor = "#1389b2"
     }
 
 
 }
-
 
 console.log(ulElement)
 
