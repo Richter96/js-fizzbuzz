@@ -23,7 +23,7 @@ const liElement = document.createElement("li")
 for (let i = 1; i < 101; i++) {
 
     if (i % 3 == 0) {
-        
+
     } else if (i % 5 == 0) {
         
     } else if (i % 3 == 0 && i % 5 == 0) {
@@ -32,7 +32,7 @@ for (let i = 1; i < 101; i++) {
     else if (i % 3 == 0 && i % 5 == 0) {
         
     }
-    liElement.append(`${i}${fizz}${buzz}${fizzbuzz}`);
+    liElement.append(i)
 }
 
 
